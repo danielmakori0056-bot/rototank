@@ -423,6 +423,48 @@ header p {
   transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
+/* Order Now button on images */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+/* Order button styling */
+.order-btn {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+  padding: 10px 18px;
+  background: #25D366; /* WhatsApp green */
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
+
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* Show button on hover */
+.gallery-item:hover .order-btn {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+/* Always visible on mobile */
+@media (max-width: 768px) {
+  .order-btn {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
 
     
   </style>
@@ -495,26 +537,41 @@ header p {
     
   <div class="gallery-item">
     <img src="010.jpg" alt="010" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="011.jpg" alt="011" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="012.jpg" alt="012" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="013.jpg" alt="013" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="014.jpg" alt="014" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
   </div>
@@ -548,14 +605,26 @@ header p {
 
 <div class="gallery-item">
   <img src="022.jpg" alt="Bush stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="023.jpg" alt="Bush stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="024.jpg" alt="Bush stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 </div>
@@ -580,14 +649,26 @@ header p {
 
 <div class="gallery-item">
   <img src="026.jpg" alt="Machine cut stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="027.jpg" alt="Machine cut stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="028.jpg" alt="Machine cut stones" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 </div>
@@ -615,18 +696,34 @@ header p {
     <!-- Product Images -->
 <div class="gallery-item">
   <img src="a.jpg" alt="Simba cement" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="c.jpg" alt="Construction materials" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="d.jpg" alt="Steel bars" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 <div class="gallery-item">
   <img src="016.jpg" alt="Building materials" loading="lazy">
+  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 
@@ -639,6 +736,9 @@ header p {
       
         <img src="dm4.jpg" alt="Dumuzaz Mabati image 4">
     </div>
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
 
     <div class="product-info">
         <p><strong>Price:</strong> @300 / Meter</p>
@@ -659,6 +759,9 @@ header p {
         <img src="bx3.jpg" alt="Box Profile Iron Sheet image 3">
         <img src="bx4.jpg" alt="Box Profile Iron Sheet image 4">
     </div>
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
 
     <div class="product-info">
         <p><strong>Price:</strong> Ksh 400 Per Meter</p>
@@ -678,6 +781,9 @@ header p {
         <img src="ci3.jpg" alt="Corrugated Iron Sheet image 3">
         <img src="ci4.jpg" alt="Corrugated Iron Sheet image 4">
     </div>
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
 
     <div class="product-info">
         <p><strong>Price:</strong> Ksh 350 Per Meter</p>
@@ -709,78 +815,124 @@ header p {
             <li>D25 – @5,600/=</li>
         </ul>
     </div>
+      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
 </div>
 
 
   <div class="gallery-item">
     <img src="001.jpg" alt="001" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="002.jpg" alt="002" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="003.jpg" alt="003" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="004.jpg" alt="004" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="005.jpg" alt="005" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="006.jpg" alt="006" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="007.jpg" alt="007" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="008.jpg" alt="008" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="009.jpg" alt="009" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
 
   <div class="gallery-item">
     <img src="015.jpg" alt="015" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="016.jpg" alt="016" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="017.jpg" alt="017" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="018.jpg" alt="018" loading="lazy">
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="019.jpg" alt="019" loading="lazy">
-    
+    <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
+
   </div>
 
 </div>
@@ -812,6 +964,7 @@ header p {
 
 </body>
 </html>
+
 
 
 
