@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ROTO TANK COMPANY LIMITED</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0b0f14;
+      --card: #141a22;
+      --accent: #d4a017;
+      --accent-dark: #9c7a10;
+      --text: #f5f7fa;
+      --muted: #9aa4b2;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #111827, #0b0f14);
+      color: var(--text);
+      line-height: 1.7;
+      padding-top: 120px;
+    }
+
+    /* HEADER */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      text-align: center;
+      background: rgba(11, 15, 20, 0.65);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 3.4rem;
+      font-weight: 800;
+    }
+
+    header p {
+      max-width: 650px;
+      margin: 1rem auto 0.5rem;
+      color: var(--muted);
+    }
+
+    /* CONTACT ICONS */
+    .contact-icons {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-icons span,
+    .contact-icons a {
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .contact-icons i {
+      color: var(--accent);
+      font-size: 1.1rem;
+    }
+
+    section {
+      padding: 5rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    section h2::after {
+      content: '';
+      width: 70px;
+      height: 4px;
+      background: var(--accent);
+      display: block;
+      margin-top: 0.6rem;
+    }
+
+    /* PRODUCT CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #141a22, #0f141b);
+      padding: 2rem;
+      border-radius: 10px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* PRICE LIST */
+    .price-list {
+      margin-top: 3rem;
+      max-width: 720px;
+      background: rgba(20,26,34,0.9);
+      padding: 1.8rem;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .price-list h3 {
+      font-size: 1.6rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .price-list p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.6rem 1.2rem;
+      font-size: 0.95rem;
+    }
+
+    .price-grid div {
+      padding: 0.45rem 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.08);
+    }
+
+    .price-grid strong {
+      color: var(--accent);
+    }
+
+    /* GALLERY */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2.5rem;
+    }
+
+    .gallery-item {
+      background: #0f141b;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+      transition: transform 0.3s;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.03);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item span {
+      display: block;
+      padding: 0.6rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem;
+      color: #6b7280;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* =========================
+       RESPONSIVE FIXES
+    ========================= */
+
+    @media (max-width: 1024px) {
+      header h1 {
+        font-size: 2.6rem;
+      }
+      body {
+        padding-top: 140px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      header p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+      }
+      .contact-icons {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+      }
+      body {
+        padding-top: 170px;
+      }
+      section {
+        padding: 3.5rem 1.2rem;
+      }
+      section h2 {
+        font-size: 1.8rem;
+      }
+      .gallery-item img {
+        height: 160px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+      .contact-icons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.4rem;
+      }
+      body {
+        padding-top: 210px;
+      }
+      .gallery-item img {
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+
+<header>
+  <h1>ROTO TANK COMPANY LIMITED</h1>
+  <p>Reliable Kenyan suppliers of water tanks and construction materials.</p>
+
+
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    ROTO TANK COMPANY LIMITED is a trusted Kenya-based supplier of water storage solutions,
+    construction materials, and industrial products. We serve homeowners, contractors,
+    developers, and institutions with durable, high-quality products built for long-term use.
+  </p>
+</section>
+
+<section id="services">
+  <h2>Our Products</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Steel & Metals</h3>
+      <p>Reinforcement bars, steel sheets, pipes, and industrial-grade metal products.</p>
+    </div>
+    <div class="card">
+      <h3>Cement & Aggregates</h3>
+      <p>High-strength cement, ballast, sand, and construction aggregates.</p>
+    </div>
+    <div class="card">
+      <h3>Water Tanks</h3>
+      <p>ROTO TANK • TOPTANK • RELIANCE • ROYAL TANK</p>
+    </div>
+  </div>
+
+  <div class="price-list">
+    <h3>Water Tank Price List</h3>
+    <p>Countrywide delivery available 🚛🇰🇪</p>
+
+    <div class="price-grid">
+      <div>1000 Litres</div><div><strong>Ksh 6,500</strong></div>
+      <div>2000 Litres</div><div><strong>Ksh 10,500</strong></div>
+      <div>3000 Litres</div><div><strong>Ksh 14,500</strong></div>
+      <div>4000 Litres</div><div><strong>Ksh 18,500</strong></div>
+      <div>5000 Litres</div><div><strong>Ksh 25,500</strong></div>
+      <div>6000 Litres</div><div><strong>Ksh 27,500</strong></div>
+      <div>8000 Litres</div><div><strong>Ksh 32,500</strong></div>
+      <div>10,000 Litres</div><div><strong>Ksh 45,500</strong></div>
+      <div>16,000 Litres</div><div><strong>Ksh 67,500</strong></div>
+      <div>20,000 Litres</div><div><strong>Ksh 98,500</strong></div>
+      <div>24,000 Litres</div><div><strong>Ksh 135,000</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Project Gallery</h2>
+
+  <div class="gallery">
+  <script>
+    for (let i = 1; i <= 28; i++) {
+      const n = String(i).padStart(3, '0');
+      document.write(`
+        <div class="gallery-item">
+          <img src="${n}.jpg" alt="${n}">
+          <span>${n}.jpg</span>
+        </div>
+      `);
+    }
+  </script>
+</div>
+
+</section>
+
+<footer>
+
+      <!-- CONTACT ICONS (ADDED ONLY) -->
+  <div class="contact-icons">
+    <a href="mailto:info@rototankcompanylimited.com">
+      <i class='bx bx-envelope'></i> rototankcompanylimited.com
+    </a>
+    <span>
+      <i class='bx bx-map'></i> Nairobi
+    </span>
+    <a href="tel:0707717794">
+      <i class='bx bx-phone'></i> 0707717794
+    </a>
+    <a href="https://wa.me/254707717794" target="_blank">
+      <i class='bx bxl-whatsapp'></i> WhatsApp
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
