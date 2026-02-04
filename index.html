@@ -423,46 +423,46 @@ header p {
   transform: scale(1.1);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
 }
-/* Order Now button on images */
+/* Reset for gallery item */
 .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
-/* Order button styling */
+/* Images */
+.gallery-item img {
+  width: 100%;
+  border-radius: 14px;
+  display: block;
+}
+
+/* Order button below image */
 .order-btn {
-  position: absolute;
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-  
+  margin-top: 8px; /* space below image */
   padding: 10px 18px;
   background: #25D366; /* WhatsApp green */
   color: #fff;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 600;
   text-decoration: none;
   border-radius: 30px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
-
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Show button on hover */
-.gallery-item:hover .order-btn {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateX(-50%) translateY(-4px);
+/* Hover effect */
+.order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
 }
 
-/* Always visible on mobile */
+/* Full width button on mobile */
 @media (max-width: 768px) {
   .order-btn {
-    opacity: 1;
-    pointer-events: auto;
+    width: 90%;
+    text-align: center;
   }
 }
 
@@ -534,44 +534,31 @@ header p {
       <div>24,000 Litres</div><div><strong>Ksh 135,000</strong></div>
     </div>
 
-    
-  <div class="gallery-item">
-    <img src="010.jpg" alt="010" loading="lazy">
-<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+
+    <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
 </a>
     
+  <div class="gallery-item">
+    <img src="010.jpg" alt="010" loading="lazy">
   </div>
 
   <div class="gallery-item">
     <img src="011.jpg" alt="011" loading="lazy">
-<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
     
   </div>
 
   <div class="gallery-item">
     <img src="012.jpg" alt="012" loading="lazy">
-<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
     
   </div>
 
   <div class="gallery-item">
-    <img src="013.jpg" alt="013" loading="lazy">
-<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
-    
+    <img src="013.jpg" alt="013" loading="lazy">   
   </div>
 
   <div class="gallery-item">
     <img src="014.jpg" alt="014" loading="lazy">
-<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
     
   </div>
   </div>
@@ -600,31 +587,26 @@ header p {
     <li>Enough for 4 bedrooms: 3000 pcs (3000 × 40 = KSh 120,000)</li>
   </ul>
 
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
  
 </div>
 
 <div class="gallery-item">
   <img src="022.jpg" alt="Bush stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
 
 </div>
 
 <div class="gallery-item">
   <img src="023.jpg" alt="Bush stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+  
 
 </div>
 
 <div class="gallery-item">
   <img src="024.jpg" alt="Bush stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
-
+  
 </div>
 
 </div>
@@ -644,30 +626,24 @@ header p {
     <li>Enough for 3 bedrooms: 2500 pcs (2500 × 30 = KSh 75,000)</li>
     <li>Enough for 4 bedrooms: 3000 pcs (3000 × 30 = KSh 90,000)</li>
   </ul>
+<a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  Order Now
+</a>
 
 </div>
 
 <div class="gallery-item">
   <img src="026.jpg" alt="Machine cut stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
-
+  
 </div>
 
 <div class="gallery-item">
   <img src="027.jpg" alt="Machine cut stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
 
 </div>
 
 <div class="gallery-item">
   <img src="028.jpg" alt="Machine cut stones" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
 
 </div>
 
@@ -684,47 +660,34 @@ header p {
     <li>SIMBA CEMENT 42.5N — <strong>KSh 680</strong></li>
   </ul>
 
-  <h3>Steel Bar Prices</h3>
-  <ul>
-    <li>D8 — <strong>KSh 400</strong></li>
-    <li>D10 — <strong>KSh 700</strong></li>
-    <li>D12 — <strong>KSh 1,000</strong></li>
-    <li>D16 — <strong>KSh 2,000</strong></li>
-    <li>D20 — <strong>KSh 3,000</strong></li>
-    <li>D25 — <strong>KSh 5,600</strong></li>
-  </ul>
-    <!-- Product Images -->
-<div class="gallery-item">
-  <img src="a.jpg" alt="Simba cement" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+  
+    <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
 </a>
+
+  <!-- Product Images -->
+<div class="gallery-item">
+  <img src="a.jpg" alt="Simba cement" loading="lazy">
 
 </div>
 
 <div class="gallery-item">
   <img src="c.jpg" alt="Construction materials" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
 
 </div>
 
 <div class="gallery-item">
   <img src="d.jpg" alt="Steel bars" loading="lazy">
-  <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
 
 </div>
 
 <div class="gallery-item">
   <img src="016.jpg" alt="Building materials" loading="lazy">
+
+</div>
   <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
 </a>
-
-</div>
 
 
 </div>
@@ -733,13 +696,12 @@ header p {
 
     <div class="product-images">
         <img src="dm1.jpg" alt="Dumuzaz Mabati image 1">
-    <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>  
+     
         <img src="dm4.jpg" alt="Dumuzaz Mabati image 4">
       <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
 </a>
+
     </div>
 
 
@@ -758,21 +720,18 @@ header p {
 
     <div class="product-images">
         <img src="bx1.jpg" alt="Box Profile Iron Sheet image 1">
-    <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
       <img src="bx2.jpg" alt="Box Profile Iron Sheet image 2">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="bx3.jpg" alt="Box Profile Iron Sheet image 3">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="bx4.jpg" alt="Box Profile Iron Sheet image 4">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
+
+
+        <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
 </a>
+
     </div>
 
 
@@ -790,17 +749,11 @@ header p {
 
     <div class="product-images">
         <img src="ci1.jpg" alt="Corrugated Iron Sheet image 1">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="ci2.jpg" alt="Corrugated Iron Sheet image 2">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="ci3.jpg" alt="Corrugated Iron Sheet image 3">
-      <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="ci4.jpg" alt="Corrugated Iron Sheet image 4">
       <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
@@ -823,17 +776,11 @@ header p {
 
     <div class="product-images">
         <img src="sb1.jpg" alt="Steel Bars image 1">
-        <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="sb2.jpg" alt="Steel Bars image 2">
-        <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="sb3.jpg" alt="Steel Bars image 3">
-        <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
-  Order Now
-</a>
+    
         <img src="sb4.jpg" alt="Steel Bars image 4">
         <a href="https://wa.me/254707717794" target="_blank" class="order-btn">
   Order Now
@@ -841,14 +788,14 @@ header p {
     </div>
 
     <div class="product-info">
-        <ul>
-            <li>D8 – @400/=</li>
-            <li>D10 – @700/=</li>
-            <li>D12 – @1,000/=</li>
-            <li>D16 – @2,000/=</li>
-            <li>D20 – @3,000/=</li>
-            <li>D25 – @5,600/=</li>
-        </ul>
+  <ul>
+    <li>D8 — <strong>KSh 400</strong></li>
+    <li>D10 — <strong>KSh 700</strong></li>
+    <li>D12 — <strong>KSh 1,000</strong></li>
+    <li>D16 — <strong>KSh 2,000</strong></li>
+    <li>D20 — <strong>KSh 3,000</strong></li>
+    <li>D25 — <strong>KSh 5,600</strong></li>
+  </ul>
     </div>
     
 
@@ -997,6 +944,7 @@ header p {
 
 </body>
 </html>
+
 
 
 
