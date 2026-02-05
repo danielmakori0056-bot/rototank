@@ -56,6 +56,20 @@ header {
 
   z-index: 1000;
 }
+    /* LOGO IN HEADER */
+.header-logo {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+}
+
+.header-logo img {
+  height: 55px;       /* adjust if needed */
+  width: auto;
+  object-fit: contain;
+}
+
 
 /* Header title */
 header h1 {
@@ -315,7 +329,7 @@ header p {
 
   background: linear-gradient(90deg, #ffffff, #bcbcbc);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /-webkit-text-fill-color: transparent;
 }
 
 /* Images grid */
@@ -465,7 +479,11 @@ header p {
     text-align: center;
   }
 }
-
+.logo img {
+  height: 60px;        /* adjust size if needed */
+  width: auto;
+  object-fit: contain;
+}
     
   </style>
 </head>
@@ -473,9 +491,14 @@ header p {
 
 <body>
 
-<header>
+<header >
+  
+  <div class="logo">
+    <img src="rotologo.jpeg" alt="Roto Tank Company Logo">
+  </div>
   <h1>ROTO TANK COMPANY LIMITED</h1>
   <p>Reliable Kenyan suppliers of water tanks and construction materials.</p>
+   
 </header>
 
 <section id="about">
@@ -729,6 +752,7 @@ header p {
 </body>
 
 </html>
+
 
 
 
